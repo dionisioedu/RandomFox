@@ -26,11 +26,7 @@ class MainViewModel : ViewModel() {
     fun nextFox() {
         viewModelScope.launch {
             try {
-                Log.d("MainViewModel", "Calling retrofit")
-
                 val newValue = FoxApi.retrofitService.getRandomFox()
-
-                Log.d("MainViewModel", "Received new value $newValue")
 
                 _random_fox.postValue(newValue)
 

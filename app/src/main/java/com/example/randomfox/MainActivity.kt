@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.apply {
             buttonRandomFox.setOnClickListener {
-                Log.d("MainActivity", "Button clicked!")
                 mViewModel.nextFox()
             }
             mViewModel.random_fox.observe(this@MainActivity, Observer {
@@ -44,5 +43,4 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(binding.root)
     }
-
 }
